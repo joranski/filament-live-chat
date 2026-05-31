@@ -19,7 +19,9 @@
 
     @if ($canCreate)
         <div class="flex flex-col gap-3">
-            {{ $this->form }}
+            <x-filament-comments::mention-autocomplete state-path="chatFormData.body">
+                {{ $this->form }}
+            </x-filament-comments::mention-autocomplete>
 
             <div>
                 <flux:button

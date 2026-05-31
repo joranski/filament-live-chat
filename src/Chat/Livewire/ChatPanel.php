@@ -12,6 +12,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Joranski\FilamentComments\Concerns\InteractsWithCommentMentionAutocomplete;
 use Joranski\FilamentComments\Support\CommentAuthor;
 use Joranski\FilamentComments\Support\CommentContentRenderer;
 use Joranski\FilamentComments\Support\CommentGroups;
@@ -26,6 +27,7 @@ use Livewire\Component;
 
 class ChatPanel extends Component implements HasForms
 {
+    use InteractsWithCommentMentionAutocomplete;
     use InteractsWithForms;
 
     public ?Model $record = null;
